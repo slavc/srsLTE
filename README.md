@@ -104,6 +104,10 @@ For example, on Ubuntu 17.04, one can install the required libraries with:
 ```
 sudo apt-get install cmake libfftw3-dev libmbedtls-dev libboost-program-options-dev libboost-thread-dev libconfig++-dev libsctp-dev
 ```
+On Fedora Linux:
+```
+sudo dnf install gcc gcc-c++ make cmake gnuradio fftw-devel fftw-libs fftw-static mbedtls-devel lksctp-tools lksctp-tools-devel boost-devel libconfig-devel
+```
 Note that depending on your flavor and version of Linux, the actual package names may be different.
 
 * Optional requirements: 
@@ -112,6 +116,7 @@ Note that depending on your flavor and version of Linux, the actual package name
 * RF front-end driver:
   * UHD:                 https://github.com/EttusResearch/uhd
   * BladeRF:             https://github.com/Nuand/bladeRF
+
 
 Download and build srsLTE: 
 ```
