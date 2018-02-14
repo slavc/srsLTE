@@ -117,6 +117,11 @@ Note that depending on your flavor and version of Linux, the actual package name
   * UHD:                 https://github.com/EttusResearch/uhd
   * BladeRF:             https://github.com/Nuand/bladeRF
 
+On Fedora Linux UHD can be installed with:
+```
+sudo dnf install uhd-devel
+```
+
 
 Download and build srsLTE: 
 ```
