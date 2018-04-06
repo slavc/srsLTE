@@ -49,6 +49,7 @@ typedef struct {
   uint16_t      mcc;        // BCD-coded with 0xF filler
   uint16_t      mnc;        // BCD-coded with 0xF filler
   std::string   mme_addr;
+  uint16_t      mme_port;
   std::string   gtp_bind_addr;
   std::string   enb_name;
 }s1ap_args_t;
@@ -86,7 +87,6 @@ public:
 
 private:
   static const int S1AP_THREAD_PRIO = 65;
-  static const int MME_PORT         = 36412;
   static const int ADDR_FAMILY      = AF_INET;
   static const int SOCK_TYPE        = SOCK_STREAM;
   static const int PROTO            = IPPROTO_SCTP;

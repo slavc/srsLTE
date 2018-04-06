@@ -11,6 +11,7 @@
 # mcc:            Mobile Country Code
 # mnc:            Mobile Network Code
 # mme_addr:       IP address of MME for S1 connnection
+# mme_port:       Port of MME for S1 connection
 # gtp_bind_addr:  Local IP address to bind for GTP connection
 # n_prb:          Number of Physical Resource Blocks (6,15,25,50,75,100)
 #
@@ -23,6 +24,7 @@ tac = 0x0007
 mcc = 001
 mnc = 01
 mme_addr = 127.0.1.100
+mme_port = 36412
 gtp_bind_addr = 127.0.0.1
 n_prb = 50
 

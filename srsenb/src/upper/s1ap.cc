@@ -305,7 +305,7 @@ bool s1ap::connect_mme()
 {
   socket_fd = 0;
 
-  s1ap_log->info("Connecting to MME %s:%d\n", args.mme_addr.c_str(), MME_PORT);
+  s1ap_log->info("Connecting to MME %s:%d\n", args.mme_addr.c_str(), args.mme_port);
 
   if((socket_fd = socket(ADDR_FAMILY, SOCK_TYPE, PROTO)) == -1) {
     s1ap_log->error("Failed to create S1AP socket\n");
@@ -326,7 +326,7 @@ bool s1ap::connect_mme()
   // Connect to the MME address
   memset(&mme_addr, 0, sizeof(struct sockaddr_in));
   mme_addr.sin_family = ADDR_FAMILY;
-  mme_addr.sin_port = htons(MME_PORT);
+  mme_addr.sin_port = htons(args.mme_port);
   if(inet_pton(AF_INET, args.mme_addr.c_str(), &(mme_addr.sin_addr)) != 1) {
     s1ap_log->error("Error converting IP address (%s) to sockaddr_in structure\n", args.mme_addr.c_str());
     return false;
